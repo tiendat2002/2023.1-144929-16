@@ -1,12 +1,12 @@
 import java.util.List;
 import java.util.Scanner;
 
-public class ToDoListController {
-    private ToDoList model;
-    private ToDoListView view;
+public class toDoListController {
+    private toDoList model;
+    private toDoListView view;
     private Scanner scanner;
 
-    public ToDoListController(ToDoList model, ToDoListView view) {
+    public toDoListController(toDoList model, toDoListView view) {
         this.model = model;
         this.view = view;
         scanner = new Scanner(System.in);
@@ -54,9 +54,9 @@ public class ToDoListController {
     }
 
     public static void main(String[] args) {
-        ToDoList model = new ToDoList();
-        ToDoListView view = new ToDoListView();
-        ToDoListController controller = new ToDoListController(model, view);
+        toDoList model = new toDoList();
+        toDoListView view = new toDoListView();
+        toDoListController controller = new toDoListController(model, view);
         controller.run();
     }
 }
