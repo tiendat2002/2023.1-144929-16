@@ -40,4 +40,5 @@ public class CalculatorView {
   public void addCalculateListener(ActionListener listener) {
     calculateButton.addActionListener(listener);
   }
+
 }
