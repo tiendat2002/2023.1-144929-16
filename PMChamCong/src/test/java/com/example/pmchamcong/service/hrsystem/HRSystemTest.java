@@ -1,0 +1,79 @@
+package com.example.pmchamcong.service.hrsystem;
+
+import com.example.pmchamcong.service.hrsystem.entity.Worker;
+import com.example.pmchamcong.service.hrsystem.entity.WorkerUnit;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
+
+public class HRSystemTest {
+
+    private HRSystem hrSystem;
+
+    @BeforeEach
+    public void setUp() {
+        hrSystem = new HRSystem();
+    }
+
+    @Test
+    public void testGetEmployeesByValidUnit() {
+        // Test case: workerUnit = CN1 (đơn vị hợp lệ trả về danh sách nhân viên)
+        WorkerUnit validUnit = new WorkerUnit("CN1");
+        ArrayList<Worker> result = hrSystem.getEmployeesByUnit(validUnit);
+
+        // Danh sách nhân viên kiểm tra
+        Worker e1 = new Worker("01", "VuMinhDung", validUnit);
+        Worker e2 = new Worker("02", "VuMinhDung", validUnit);
+        Worker e3 = new Worker("03", "VuMinhDung", validUnit);
+        Worker e4 = new Worker("04", "VuMinhDung", validUnit);
+        Worker e5 = new Worker("05", "VuMinhDung", validUnit);
+        Worker e6 = new Worker("06", "VuMinhDung", validUnit);
+
+        // Kiểm tra độ dài danh sách
+        assertEquals(6, result.size());
+
+        // Kiểm tra từng nhân viên trong danh sách
+        assertTrue(result.contains(e1));
+        assertTrue(result.contains(e2));
+        assertTrue(result.contains(e3));
+        assertTrue(result.contains(e4));
+        assertTrue(result.contains(e5));
+        assertTrue(result.contains(e6));
+    }
+
+    @Test
+    public void testGetEmployeesByInvalidUnit() {
+        // Test case: workerUnit = vp1 (đơn vị không hợp lệ, thông báo lỗi)
+        WorkerUnit invalidUnit = new WorkerUnit("VP1");
+        ArrayList<Worker> result = hrSystem.getEmployeesByUnit(invalidUnit);
+        assertTrue(result.isEmpty());
+    }
+
+    @Test
+    public void testGetEmployeesByValidEmptyUnit() {
+        // Test case: workerUnit = cn4 (đơn vị hợp lệ nhưng không có nhân viên)
+        WorkerUnit emptyUnit = new WorkerUnit("CN4");
+        ArrayList<Worker> result = hrSystem.getEmployeesByUnit(emptyUnit);
+        assertTrue(result.isEmpty());
+    }
+
+    @Test
+    public void testGetEmployeesByNullUnit() {
+        // Test case: workerUnit = null (đơn vị rỗng)
+        try {
+            ArrayList<Worker> result = hrSystem.getEmployeesByUnit(null);
+            fail("Expected NullPointerException but no exception was thrown.");
+        } catch (NullPointerException e) {
+            // Kiểm tra xem có phải là NullPointerException không
+            assertNotNull(e);
+            // Kiểm tra xem thông báo lỗi có chứa đoạn text mong đợi không
+            assertTrue(e.getMessage().contains("Cannot invoke \"com.example.pmchamcong.service.hrsystem.entity.WorkerUnit.getName()\" because \"workerUnit\" is null"));
+        }
+    }
+}
