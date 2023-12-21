@@ -1,0 +1,58 @@
+.cell_container{
+    -fx-background-radius: 10;
+    -fx-background-color: #FFFFFF;
+    -fx-effect: dropshadow(three-pass-box,#DDDDDD,5,0,0,7);
+}
+
+.schedule_icon_container {
+    -fx-background-color: #FFFFFF;
+    -fx-alignment: center;
+    -fx-spacing: 5;
+}
+
+.schedule_date_lbl {
+    -fx-text-fill: #AAAAAA;
+    -fx-font-weight: 700;
+}
+
+.schedule_user_name{
+    -fx-text-fill: #000000;
+    -fx-font-weight: 700;
+}
+
+.schedule_edit_btn {
+    -fx-background-color: #132A13;
+    -fx-background-radius: 5;
+    -fx-text-fill: #FFFFFF;
+    -fx-padding: 5;
+    -fx-font-weight: 700;
+}
+
+.schedule_edit_btn FontAwesomeIconView{
+    -fx-fill: #FFFFFF;
+}
+
+.schedule_delete_btn {
+    -fx-background-color: #9f1313;
+    -fx-background-radius: 5;
+    -fx-text-fill: #FFFFFF;
+    -fx-padding: 5;
+    -fx-font-weight: 700;
+}
+
+.schedule_delete_btn FontAwesomeIconView{
+    -fx-fill: #FFFFFF;
+}
+
+.icon_blur {
+    -fx-fill: #DDDDDD;
+}
+
+.icon_success {
+    -fx-fill: #0cc00c;
+}
+
+.icon_fall {
+    -fx-fill: #de0e0e;
+}
+

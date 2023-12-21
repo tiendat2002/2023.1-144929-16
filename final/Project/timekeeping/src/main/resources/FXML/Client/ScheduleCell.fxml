@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="60.0" prefWidth="750.0" styleClass="cell_container" stylesheets="@../../Styles/ScheduleCell.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="name_user" layoutX="84.0" layoutY="20.0" styleClass="schedule_user_name" text="Nguyen Tien Dat" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="84.0" AnchorPane.topAnchor="20.0" />
+      <Label fx:id="room_user" layoutX="211.0" layoutY="20.0" styleClass="schedule_date_lbl" text="1th" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="211.0" AnchorPane.topAnchor="20.0" />
+      <Label fx:id="apart_user" layoutX="271.0" layoutY="20.0" styleClass="schedule_date_lbl" text="Web Developer" AnchorPane.bottomAnchor="20.799999999999997" AnchorPane.leftAnchor="271.0" AnchorPane.topAnchor="20.0" />
+      <Label fx:id="date_schedule" layoutX="396.0" layoutY="20.0" styleClass="schedule_user_name" text="15-12-2023" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="396.0" AnchorPane.topAnchor="20.0" />
+      <Label fx:id="time_schedule" layoutX="480.0" layoutY="20.0" styleClass="schedule_user_name" text="9:00" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="20.0" />
+      <Label fx:id="id_user" layoutX="22.0" layoutY="20.0" styleClass="schedule_date_lbl" text="12345" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="22.0" AnchorPane.topAnchor="20.0" />
+      <Label fx:id="part_schedule" layoutX="538.0" layoutY="20.0" styleClass="schedule_user_name" text="Morning" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="538.0" AnchorPane.topAnchor="20.0" />
+      <Label fx:id="type_schedule" layoutX="619.0" layoutY="20.0" styleClass="schedule_user_name" text="Out" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="619.0" AnchorPane.topAnchor="20.0" />
+      <Label fx:id="text_check" layoutX="664.0" layoutY="16.0" styleClass="schedule_edit_btn" text="Complete" AnchorPane.leftAnchor="664.0">
+         <graphic>
+            <FontAwesomeIconView fx:id="icon_check" glyphName="CHECK" />
+         </graphic>
+      </Label>
+   </children>
+</AnchorPane>

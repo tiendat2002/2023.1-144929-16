@@ -1,0 +1,44 @@
+.history_controller {
+    -fx-background-color: #AAAAAA;
+}
+
+.history_title {
+    -fx-font-size: 2em;
+    -fx-font-weight: bold;
+    -fx-font-family: Calibri;
+}
+
+.section_title {
+    -fx-font-weight: bold;
+    -fx-font-family: Calibri;
+}
+
+.history_date {
+    -fx-background-color: #FFFFFF;
+    -fx-border-width: 2;
+    -fx-border-color: #132A13;
+}
+
+.history_drop {
+    -fx-border-color: #132A13;
+    -fx-border-width: 2;
+    -fx-background-color: #FFFFFF;
+
+}
+
+.history_input {
+    -fx-border-width: 2;
+    -fx-border-color: #132A13;
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 50;
+}
+
+.history_button {
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: #132A13;
+    -fx-background-radius: 100;
+}
+
+.history_button FontAwesomeIconView {
+    -fx-fill: #FFFFFF;
+}

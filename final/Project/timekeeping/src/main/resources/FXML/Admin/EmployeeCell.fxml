@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="60.0" prefWidth="750.0" styleClass="cell_container" stylesheets="@../../Styles/ScheduleCell.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" >
+    <children>
+        <VBox layoutX="8.0" layoutY="18.0" prefWidth="40.0" styleClass="schedule_icon_container" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="5.0">
+            <children>
+                <FontAwesomeIconView glyphName="USER" size="20" />
+            </children>
+        </VBox>
+        <Label fx:id="name_user" layoutX="130.0" layoutY="21.0" styleClass="schedule_user_name" text="Nguyen Tien Dat" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="20.0" />
+        <Label fx:id="room_user" layoutX="257.0" layoutY="22.0" styleClass="schedule_date_lbl" text="1th" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="20.0" />
+        <Label fx:id="apart_user" layoutX="310.0" layoutY="20.0" styleClass="schedule_date_lbl" text="Web Developer" AnchorPane.bottomAnchor="20.799999999999997" AnchorPane.leftAnchor="310.0" AnchorPane.topAnchor="20.0" />
+        <Label fx:id="birth_user" layoutX="434.0" layoutY="20.0" styleClass="schedule_user_name" text="25-5-2002" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="434.0" AnchorPane.topAnchor="20.0" />
+        <Label fx:id="salary_user" layoutX="523.0" layoutY="20.0" styleClass="schedule_user_name" text="10.000.000" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="523.0" AnchorPane.topAnchor="20.0" />
+        <Label fx:id="id_user" layoutX="68.0" layoutY="22.0" styleClass="schedule_date_lbl" text="12345" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="68.0" AnchorPane.topAnchor="20.0" />
+        <Button fx:id="edit_btn" layoutX="611.0" layoutY="16.0" mnemonicParsing="false" styleClass="schedule_edit_btn" text="Edit" AnchorPane.leftAnchor="611.0">
+            <graphic>
+                <FontAwesomeIconView glyphName="EDIT" size="15" />
+            </graphic>
+        </Button>
+        <Button fx:id="delete_btn" layoutX="680.0" layoutY="16.0" mnemonicParsing="false" styleClass="schedule_delete_btn" text="Delete" AnchorPane.leftAnchor="680.0">
+            <graphic>
+                <FontAwesomeIconView glyphName="CLOSE" size="15" text="" />
+            </graphic>
+        </Button>
+    </children>
+</AnchorPane>
